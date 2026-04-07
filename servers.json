@@ -1,0 +1,14 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "Mon E-commerce DB",
+            "Group": "Servers",
+            "Host": "postgres",
+            "Port": 5432,
+            "MaintenanceDB": "brazilian_ecommerce",
+            "Username": "postgres",
+            "Password": "postgres",
+            "SSLMode": "prefer"
+        }
+    }
+}
