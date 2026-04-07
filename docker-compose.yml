@@ -1,4 +1,14 @@
 services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - ecommerce_network
+    depends_on:
+      - postgres
+
   # 🗄️ PostgreSQL Database
   postgres:
     image: postgres:15-alpine
