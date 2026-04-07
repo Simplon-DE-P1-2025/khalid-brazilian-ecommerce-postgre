@@ -4,11 +4,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: etl_processor
+    volumes:
+      - ./src:/app/src # Gardez uniquement le code source pour le développement
     networks:
       - ecommerce_network
     depends_on:
-      - postgres
-
+      postgres:
+        condition: service_healthy
   # 🗄️ PostgreSQL Database
   postgres:
     image: postgres:15-alpine
